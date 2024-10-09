@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Custom menu plugin",
+    "version": "0.1",
+    "description": "",
+    "permissions": [
+        "contextMenus",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "menu-control.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "main.js"
+            ]
+        }
+    ],
+    "action": {}
+}
